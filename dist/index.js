@@ -36,8 +36,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importStar(require("express"));
 const app = (0, express_1.default)();
 const port = 3001;
+
+import express from 'express';
+const app = express();
+const port = process.env.PORT || 3000;
+
 app.get('/', (req, res) => {
-    let helloMessage = 'Hello Incubator!';
+    let helloMessage = 'Hello Incubator';
     res.send(helloMessage);
 });
 app.listen(port, () => {
