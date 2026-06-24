@@ -1,6 +1,7 @@
 {
   "name": "new_project_start",
   "version": "1.0.0",
+  "type": "module",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {

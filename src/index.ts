@@ -1,5 +1,9 @@
+
 import express from 'express';
 import { json, urlencoded } from 'body-parser';
+
+
+import express, {Request, Response}  from 'express';
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -10,6 +14,7 @@ const addresses = [{ id: 1, value: 'london-street 11'}, {id: 2, value: 'lorsanov
 
 app.use(json()); // Для парсинга JSON-объектов в теле запроса
 app.use(urlencoded({ extended: true }));
+
 
 
 app.get('/products', (req: Request, res: Response) => {
@@ -65,6 +70,18 @@ app.get('/addresses/:id', (req: Request, res: Response) => {
     } else {
         res.sendStatus(404);
     }
+
+app.get('/', (req: Request, res: Response) => {
+    let helloMessage = 'Hello Incubator!'
+
+import express from 'express'
+const app = express();
+const port = process.env.PORT || 3000
+app.get('/', (req: any, res: any) => {
+    let helloMessage = 'Hello Incubator'
+
+    res.send(helloMessage);
+
 });
 
 app.listen(port, () => {

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = require("body-parser");
 const app = (0, express_1.default)();
+
 const port = process.env.PORT || 3001;
 const products = [{ id: 1, title: 'watermelon' }, { id: 2, title: 'orange' }];
 const addresses = [{ id: 1, value: 'london-street 11' }, { id: 2, value: 'lorsanov 22' },
@@ -69,6 +70,17 @@ app.get('/addresses/:id', (req, res) => {
     else {
         res.sendStatus(404);
     }
+
+const port = 3001;
+
+import express from 'express';
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    let helloMessage = 'Hello Incubator';
+    res.send(helloMessage);
+
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
